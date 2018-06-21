@@ -5,6 +5,7 @@
     <title>Kevin Zeng Hu</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     	body {
     		margin-top: 20px;
@@ -12,8 +13,14 @@
         font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 500;
     	}
+
+      hr {
+        max-width: 200px;
+        margin: 0px;
+      }
+
     	section {
-    		margin: 10px 0;
+    		margin: 30px 0;
     	}
     	p {
     		/*margin: 0;*/
@@ -25,6 +32,14 @@
         margin-top: 15px;
     		list-style-type: none;
     	}
+
+      a {
+        color: #4472c4;
+      }
+
+      a:visited {
+        color: #ad4343;
+      }
 
       div.project {
         margin-top: 15px;
@@ -41,39 +56,47 @@
       div.project > div.header a {
         font-weight: bold;
       }
+
+      img#flower {
+        /*margin-top: 30px;*/
+        margin-bottom: 20px;
+        height: 150px;
+      }
 	</style>
 
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41355066-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-41355066-1');
   </script>
 
+  <script>
+    function getRandomImage() {
+      var imageIndices = [1, 2, 3, 4];
+      return 'flower_' + [Math.floor(Math.random() * imageIndices.length) + 1] + '.png';
+    }
+  </script>
   </head>
   <body>
   	<section>
 		<div>Kevin Zeng Hu (kzh)</div>
     <div>Accessible Data Visualization and Analysis Systems</div>
-		<div>PhD Student at the MIT Media Lab</div>
+		<div>PhD Candidate at the MIT Media Lab</div>
 		<div><a href="mailto:kzh@mit.edu">kzh@mit.edu</a> | <a href="https://twitter.com/kevinzenghu" target="_blank">@kevinzenghu</a> | <a href="https://www.linkedin.com/in/kevinzenghu" target="_blank">LinkedIn</a></div>
 	</section>
 
-	—
-
 	<section>
-		<p>We should all be able to ask questions of our data! Towards this end, I build data visualization and analysis tools that are accessible to the many, not just the few. My approach is to combine human-centered interface design, recommender systems, and machine learning — though the "how?" is secondary to the "why?"
+		<p>We should all be able to ask questions of our data! Towards this end, I build data visualization and analysis tools that are accessible to the many, not just the few. My current approach is to combine human-centered interface design, recommender systems, and machine learning — though the "how?" is secondary to the "why?"
     </p>
 
 
-    <p>Currently I'm a graduate student with the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. Previously, I studied Physics at MIT and interned at several tech companies. My past projects have been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.
+    <p>I'm currently a graduate student with the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. Previously, I studied Physics at MIT and interned at several tech companies. My past projects have been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.
     </p>
 	</section>
 
-	—
+  <hr>
 
 	<section>
 		Selected Projects:
@@ -90,7 +113,7 @@
 
     <div class="project">
       <div class="header">
-        <a href="">Clinton Circle</a> (2016)
+        <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Clinton Circle</a> (2016)
         <div class="description">Visualize WikiLeaks e-mails as network of connections</div>
       </div>
 
@@ -162,7 +185,7 @@
 
 	</section>
 
-	—
+	<hr>
 
 	<section>
 		Education:
@@ -173,10 +196,19 @@
 		</ul>
 	</section>
 
-	—
+	<hr>
 
 	<section>
+    <div>
+      <img id="flower" />
+    </div>
 		Last Updated on June 2018
 	</section>
+
+  <script>
+    var flowerSrc = getRandomImage();
+    console.log(flowerSrc)
+    document.getElementById('flower').src = flowerSrc;
+  </script>
   </body>
 </html>
