@@ -7,60 +7,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kevin Hu is a PhD candidate at the MIT Media Lab working on systems for accessible data visualization and analysis."/>
-    <style>
-    	body {
-    		margin: 20px 30px;
-        font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    	}
-
-      hr {
-        max-width: 200px;
-        margin: 0px;
-      }
-
-    	section {
-    		margin: 30px 0;
-    	}
-    	p {
-    		/*margin: 0;*/
-    		max-width: 500px;
-    	}
-    	ul {
-        padding: 0;
-    		margin: 0;
-        margin-top: 15px;
-    		list-style-type: none;
-    	}
-
-      a {
-        color: #4472c4;
-      }
-
-      a:visited {
-        color: #ad4343;
-      }
-
-      div.project {
-        margin-top: 15px;
-      }
-
-      div.project > div.header {
-        margin-bottom: 5px;
-      }
-
-      div.project > div.info, div.project > div.press {
-        margin-left: 15px;
-      }
-
-      div.project > div.header a {
-        font-weight: bold;
-      }
-
-      img#flower {
-        /*margin-top: 30px;*/
-        margin-bottom: 20px;
-        height: 150px;
-      }
+    <link rel="stylesheet" href="main.css" />
 	</style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41355066-1"></script>
@@ -79,139 +26,162 @@
   </script>
   </head>
   <body>
+    <div class="wrapper">
   	<section>
-		<div>Kevin Zeng Hu (kzh)</div>
-    <div>Accessible Data Visualization and Analysis Systems</div>
-		<div>PhD Candidate at the MIT Media Lab</div>
-		<div><a href="mailto:kzh@mit.edu">kzh@mit.edu</a> | <a href="https://twitter.com/kevinzenghu" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/in/kevinzenghu" target="_blank">LinkedIn</a> | <a href="https://www.goodreads.com/user/show/63949194-kevin-hu" target="_blank">Goodreads</a></div>
-	</section>
+  		<h1>Kevin Zeng Hu</h1>
+  	</section>
 
-	<section>
-		<p>We should all be able to ask questions of our data! Towards this end, I build data visualization and analysis tools that are accessible to the many, not just the few. My approach is to combine human-centered interface design, recommender systems, and machine learning — though the "how?" is secondary to the "why?"
-    </p>
+  	<section>
+  		<p>We should all be able to ask questions of our data. Towards this end, I build data visualization and analysis tools that are accessible to the many, not just the few. My approach is to combine human-centered interface design, recommender systems, and machine learning — though the "how?" is secondary to the "why?"
+      </p>
 
 
-    <p>I'm currently a graduate student with the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. Previously, I studied Physics at MIT and interned at several tech companies. My past projects have been published in top academic journals and covered in diverse media outlets, though I'm proudest of having reached the front page of Reddit.
-    </p>
-	</section>
+      <p>I'm currently a doctoral student with the <a href="http://collective.media.mit.edu" target="_blank">Collective Learning Group</a> at the <a href="https://media.mit.edu" target="_blank">MIT Media Lab</a>. Previously, I studied Physics at MIT and interned at several tech companies. My past projects have been published in top academic journals and covered in diverse media outlets. But I'm proudest of having reached the front page of Reddit.
+      </p>
+  	</section>
 
-  <hr>
+    <section>
+      <h2>Contact</h2>
+      <p><a href="mailto:kzh@mit.edu">kzh@mit.edu</a><span class="sep"></span><a href="https://twitter.com/kevinzenghu" target="_blank">Twitter</a><span class="sep"></span><a href="https://www.linkedin.com/in/kevinzenghu/" target="_blank">LinkedIn</a></p>
+    </section>
 
-	<section>
-		Selected Projects:
-    <div class="project">
-      <div class="header">
-        <a href="https://arxiv.org/abs/1808.04819" target="_blank">VizML</a> (2018)
-        <div class="description">Machine learning for visualization recommendation</div>
+  	<section>
+  		<h2>Projects</h2>
+      <div class="project">
+        <div class="header">
+          <a href="2019-Sherlock-KDD.pdf" target="_blank">Sherlock</a> (2019)
+          <div class="description">Deep learning for semantic type detection</div>
+        </div>
+
+        <div class="info">Info:
+          <a href="2019-Sherlock-KDD.pdf" target="_blank">KDD Preprint</a>
+        </div>
       </div>
 
-      <div class="info">Info:
-        <a href="https://arxiv.org/abs/1808.04819" target="_blank">Preprint</a>
-      </div>
-    </div>
+      <div class="project">
+        <div class="header">
+          <a href="https://vizml.media.mit.edu" target="_blank">VizML</a> (2019)
+          <div class="description">Machine learning for visualization recommendation</div>
+        </div>
 
-    <div class="project">
-      <div class="header">
-        <a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018)
-        <div class="description">Semi-automated data exploration system</div>
-      </div>
-
-      <div class="info">Info:
-        <a href="https://dive.media.mit.edu/video" target="_blank">Video</a>, <a href="https://dive.media.mit.edu/paper" target="_blank">Paper</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="header">
-        <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Clinton Circle</a> (2016)
-        <div class="description">Visualize WikiLeaks e-mails as network of connections</div>
+        <div class="info">Info:
+          <a href="https://medium.com/acm-chi/vizml-a-machine-learning-approach-to-visualization-recommendation-85b5affde473" target="_blank">Blog Post</a>, <a href="https://www.youtube.com/watch?v=lUq35pi98yI" target="_blank">Video</a>, <a href="https://vizml.media.mit.edu/assets/2019-VizML-CHI.pdf" target="_blank">CHI Paper</a>
+        </div>
       </div>
 
-      <div class="press">Press:
-        <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Univision</a>
-      </div>
-    </div>
+      <div class="project">
+        <div class="header">
+          <a href="https://viznet.media.mit.edu" target="_blank">VizNet</a> (2019)
+          <div class="description">Towards a large-scale visualization learning and benchmaring repository</div>
+        </div>
 
-    <div class="project">
-      <div class="header">
-        <a href="http://language.media.mit.edu" target="_blank">Global Language Network</a> (2014)      
-        <div class="description">Understand the connection between languages</div>
+        <div class="info">Info:
+          <a href="https://www.youtube.com/watch?v=s7vKysUvQuI" target="_blank">Video</a>,
+          <a href="http://viznet.media.mit.edu/img/2019-VizNet-CHI.pdf" target="_blank">CHI Paper</a>
+        </div>
       </div>
-      <div class="info">
-        Info:
-        <a href="https://www.youtube.com/watch?v=mflFIjV0iyc" target="_blank">Video</a>,
-        <a href="http://www.pnas.org/cgi/doi/10.1073/pnas.1410931111" target="_blank">Paper</a>
-      </div>      
-      <div class="press">
-        Press:
-        <a href="https://www.economist.com/prospero/2014/12/31/when-bigger-isnt-better" target="_blank">The Economist</a>,
-        <a href="http://www.sciencemag.org/news/2014/12/want-influence-world-map-reveals-best-languages-speak" target="_blank">Science Magazine</a>,
-        <a href="https://hbr.org/2015/01/why-english-not-mandarin-is-the-language-of-innovation" target="_blank">Harvard Business Review</a>
-      </div>      
-    </div>
 
-    <div class="project">
-      <div class="header">
-        <a href="http://pantheon.media.mit.edu" target="_blank">Pantheon</a> (2014)
-        <div class="description">Explore historical cultural production</div>
-      </div>      
-      <div class="info">
-        Info:
-        <a href="https://vimeo.com/89015710" target="_blank">Video</a>,
-        <a href="https://www.nature.com/articles/sdata201575" target="_blank">Paper</a>
-      </div>
-      <div class="press">
-        Press:
-        <a href="https://www.nytimes.com/2014/03/16/magazine/whos-more-famous-than-jesus.html" target="_blank">New York Times</a>,
-        <a href="https://www.fastcodesign.com/3027817/mit-media-lab-maps-historys-biggest-celebrities" target="_blank">Fast Company</a>,
-        <a href="https://www.americaninno.com/boston/mit-media-labs-pantheon-project-historys-biggest-celebrities-1/" target="_blank">BostInno</a>
-      </div>
-    </div>
+      <div class="project">
+        <div class="header">
+          <a href="http://dive.media.mit.edu" target="_blank">DIVE</a> (2018)
+          <div class="description">Recommendation-driven data exploration system</div>
+        </div>
 
-    <div class="project">
-      <div class="header">
-        <a href="http://gifgif.media.mit.edu" target="_blank">GIFGIF</a> (2014)
-        <div class="description">Measure the emotional content of animated GIFs</div>
+        <div class="info">Info:
+          <a href="https://dive.media.mit.edu/video" target="_blank">Video</a>, <a href="https://dive.media.mit.edu/paper" target="_blank">SIGMOD Workshop Paper</a>
+        </div>
       </div>
-      <div class="press">
-        Press:
-        <a href="https://www.wired.com/2015/03/gifs-teach-computers-emotion/" target="_blank">Wired</a>,
-        <a href="https://www.washingtonpost.com/news/the-intersect/wp/2014/05/20/its-about-measuring-that-intangible-human-experience-a-qa-with-the-mit-researchers-studying-gifs/" target="_blank">Washington Post</a>,
-        <a href="https://www.buzzfeed.com/ariannarebolini/map-the-emotional-language-of-gifs-with-mits-gifgif-project" target="_blank">Buzzfeed</a>
-      </div>
-    </div>
 
-    <div class="project">
-      <div class="header">
-  		  <a href="http://fold.cm" target="_blank">FOLD</a> (2014)
-        <div class="description">Read and write non-linear, contextual stories</div>
+      <div class="project">
+        <div class="header">
+          <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Clinton Circle</a> (2016)
+          <div class="description">WikiLeaks e-mails visualized as network of connections</div>
+        </div>
+
+        <div class="press">Press:
+          <a href="https://www.univision.com/univision-news/politics/this-is-what-clintons-circle-of-trust-looks-like-from-her-emails" target="_blank">Univision</a>
+        </div>
       </div>
+
+      <div class="project">
+        <div class="header">
+          <a href="http://language.media.mit.edu" target="_blank">Global Language Network</a> (2014)      
+          <div class="description">Understanding the connections between languages</div>
+        </div>
+        <div class="info">
+          Info:
+          <a href="https://www.youtube.com/watch?v=mflFIjV0iyc" target="_blank">Video</a>,
+          <a href="http://www.pnas.org/cgi/doi/10.1073/pnas.1410931111" target="_blank">PNAS Paper</a>
+        </div>      
         <div class="press">
           Press:
-          <a href="http://www.niemanlab.org/2014/07/fold-wants-to-keep-you-from-tumbling-down-link-rabbit-holes/" target="_blank">Nieman Journalism Lab</a>
-        </div>           
-    </div>
-	</section>
+          <a href="https://www.economist.com/prospero/2014/12/31/when-bigger-isnt-better" target="_blank">The Economist</a>,
+          <a href="http://www.sciencemag.org/news/2014/12/want-influence-world-map-reveals-best-languages-speak" target="_blank">Science Magazine</a>,
+          <a href="https://hbr.org/2015/01/why-english-not-mandarin-is-the-language-of-innovation" target="_blank">Harvard Business Review</a>
+        </div>      
+      </div>
 
-	<hr>
+      <div class="project">
+        <div class="header">
+          <a href="http://pantheon.media.mit.edu" target="_blank">Pantheon</a> (2014)
+          <div class="description">Quantifying historical cultural production</div>
+        </div>      
+        <div class="info">
+          Info:
+          <a href="https://vimeo.com/89015710" target="_blank">Video</a>,
+          <a href="https://www.nature.com/articles/sdata201575" target="_blank">Nature Scientific Data Paper</a>
+        </div>
+        <div class="press">
+          Press:
+          <a href="https://www.nytimes.com/2014/03/16/magazine/whos-more-famous-than-jesus.html" target="_blank">New York Times</a>,
+          <a href="https://www.fastcodesign.com/3027817/mit-media-lab-maps-historys-biggest-celebrities" target="_blank">Fast Company</a>,
+          <a href="https://www.americaninno.com/boston/mit-media-labs-pantheon-project-historys-biggest-celebrities-1/" target="_blank">BostInno</a>
+        </div>
+      </div>
 
-	<section>
-		Education:
-		<ul>
-			<li>Ph.D. MIT Media Lab (2019 expected)</li>
-			<li>S.M. MIT Media Lab (2015)</li>
-			<li>S.B. MIT Physics (2013)</li>
-		</ul>
-	</section>
+      <div class="project">
+        <div class="header">
+          <a href="http://gifgif.media.mit.edu" target="_blank">GIFGIF</a> (2014)
+          <div class="description">Measuring emotional content of animated GIFs</div>
+        </div>
+        <div class="press">
+          Press:
+          <a href="https://www.wired.com/2015/03/gifs-teach-computers-emotion/" target="_blank">Wired</a>,
+          <a href="https://www.washingtonpost.com/news/the-intersect/wp/2014/05/20/its-about-measuring-that-intangible-human-experience-a-qa-with-the-mit-researchers-studying-gifs/" target="_blank">Washington Post</a>,
+          <a href="https://www.buzzfeed.com/ariannarebolini/map-the-emotional-language-of-gifs-with-mits-gifgif-project" target="_blank">Buzzfeed</a>
+        </div>
+      </div>
 
-	<hr>
+      <div class="project">
+        <div class="header">
+    		  <a href="http://fold.cm" target="_blank">FOLD</a> (2014)
+          <div class="description">Platform for reading and writing non-linear and contextual stories</div>
+        </div>
+          <div class="press">
+            Press:
+            <a href="http://www.niemanlab.org/2014/07/fold-wants-to-keep-you-from-tumbling-down-link-rabbit-holes/" target="_blank">Nieman Journalism Lab</a>
+          </div>           
+      </div>
+  	</section>
 
-	<section>
-    <div>
-      <img id="flower" />
-    </div>
-		Last Updated on June 2018
-	</section>
+  	<section>
+  		<h2>Education</h2>
+  		<ul>
+  			<li>Ph.D. MIT Media Lab (2019 expected)</li>
+  			<li>S.M. MIT Media Lab (2015)</li>
+  			<li>S.B. MIT Physics (2013)</li>
+  		</ul>
+  	</section>
+
+  	<hr>
+
+  	<section>
+      <div>
+        <img id="flower" />
+      </div>
+  		Last Updated on May 2019
+  	</section>
+  </div>
 
   <script>
     var flowerSrc = getRandomImage();
